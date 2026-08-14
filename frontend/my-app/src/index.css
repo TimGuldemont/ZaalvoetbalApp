@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #0f1923;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+#root {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #ffffff;
+}
+
+/* Navbar */
+nav {
+  background-color: #1a2535;
+  padding: 1rem;
+  border-bottom: 2px solid #00b4d8;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: #00b4d8;
+  color: #0f1923;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #1a2535;
+  border-right: 2px solid #00b4d8;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Knoppen */
+button {
+  background-color: #00b4d8;
+  color: #0f1923;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-left: 0.75rem;
+}
+
+button:hover {
+  background-color: #0096c7;
+}
+
+input {
+  margin-left: 0.75rem;
+}
+
+/* Verwijder knoppen */
+button.verwijder {
+  background-color: #e63946;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+button.verwijder:hover {
+  background-color: #c1121f;
+}
+
+/* Forms */
+input,
+select {
+  background-color: #1a2535;
+  border: 1px solid #00b4d8;
+  color: #e0e0e0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lijsten zonder bullets */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0;
+  gap: 0.75rem;
+}
+
+/* Match card voor homepage */
+.match-card {
+  background-color: #1a2535;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #00b4d8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-card .teams {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.match-card .score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00b4d8;
+  letter-spacing: 2px;
+}
+
+.match-card .datum {
+  font-size: 0.85rem;
+  color: #8899aa;
+}
+
+/* Ploeg en speler lijstitems */
+.lijst-item {
+  background-color: #1a2535;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Login pagina */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 1rem;
+}
+
+.login-container input {
+  width: 300px;
+  padding: 0.75rem;
+}
+
+.login-container button {
+  width: 300px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+/* Match detail layout */
+.match-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #1a2535;
+  border-radius: 10px;
+}
+
+.match-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.match-score-display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00b4d8;
+  margin: 1rem 0;
+}
+
+.score-knoppen {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.score-knoppen button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+/* Twee kolommen layout */
+.twee-kolommen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kolom-card {
+  background-color: #1a2535;
+  border-radius: 10px;
+  padding: 1.25rem;
+  border-top: 3px solid #00b4d8;
+}
+
+.kolom-card h4 {
+  margin-bottom: 1rem;
+  color: #00b4d8;
+}
+
+/* Invoer sectie */
+.invoer-sectie {
+  background-color: #1a2535;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.invoer-sectie h4 {
+  margin-bottom: 1rem;
+  color: #00b4d8;
+}
+
+.invoer-rij {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
