@@ -9,7 +9,7 @@
         public int UitploegScore { get; set; }
         public string? Uur { get; set; }
         public string? Datum { get; set; }
-        public List<Speler> Doelpuntenmakers { get; set; } = new();
+        public List<Doelpunt> Doelpuntenmakers { get; set; } = new();
         public List<Kaart> Kaarten { get; set; } = new();
         public List<Stem> Stemmen { get; set; } = new();
     }
