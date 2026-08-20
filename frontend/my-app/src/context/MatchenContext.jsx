@@ -110,7 +110,7 @@ export function MatchenProvider({ children }) {
         const response = await fetch(`https://localhost:7001/api/matchen/${id}/doelpunten`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ doelpunt: { spelernaam, ploeg } })
+            body: JSON.stringify({ spelernaam, ploeg })
         })
 
         // eslint-disable-next-line no-useless-assignment
@@ -149,6 +149,15 @@ export function MatchenProvider({ children }) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ spelernaam, ploeg, kleur })
         })
+
+        // eslint-disable-next-line no-useless-assignment
+        let responseData = null
+        try {
+            responseData = await response.json()
+        } catch {
+            responseData = null
+        }
+        
         const nieuweKaart = await response.json()
         setMatchen(prev => prev.map((match) => {
             if (match.id === id) {
