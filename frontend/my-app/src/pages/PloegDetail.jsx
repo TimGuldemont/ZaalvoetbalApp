@@ -1,5 +1,5 @@
-import SpelersLijst from "../components/spelers/spelerslijst";
-import SpelerForm from "../components/spelers/spelerform";
+import SpelersLijst from "../components/spelers/SpelersLijst";
+import SpelerForm from "../components/spelers/SpelerForm";
 import { useParams } from "react-router-dom";
 import { usePloegen } from "../context/usePloegen";
 
