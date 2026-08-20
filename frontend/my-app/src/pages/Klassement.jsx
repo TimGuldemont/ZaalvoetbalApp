@@ -15,7 +15,7 @@ const Klassement = () => {
 
       matchen.forEach((match) => {
         // Check of ploeg als thuisploeg speelt
-        if (match.thuisploeg === ploeg.id) {
+        if (match.thuisploeg === ploeg.naam) {
           if (match.scoreThuisploeg > match.scoreUitploeg) {
             wins++
             points += 3
@@ -27,7 +27,7 @@ const Klassement = () => {
           }
         }
         // Check of ploeg als uitploeg speelt
-        else if (match.uitploeg === ploeg.id) {
+        else if (match.uitploeg === ploeg.naam) {
           if (match.scoreUitploeg > match.scoreThuisploeg) {
             wins++
             points += 3
