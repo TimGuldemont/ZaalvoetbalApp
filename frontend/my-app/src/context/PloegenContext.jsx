@@ -59,7 +59,7 @@ export function PloegenProvider({ children }) {
   }
 
   return (
-    <PloegenContext.Provider value={{ ploegen, PloegToevoegen, VerwijderPloeg, SpelerToevoegen, VerwijderSpeler, ManVanDeMatchToevoegen }}>
+    <PloegenContext.Provider value={{ ploegen, PloegToevoegen, VerwijderPloeg, SpelerToevoegen, VerwijderSpeler }}>
       {children}
     </PloegenContext.Provider>
   )
