@@ -158,7 +158,14 @@ export function MatchenProvider({ children }) {
             responseData = null
         }
         
-        const nieuweKaart = await response.json()
+        const nieuweKaart = {
+            ...responseData,
+            id: responseData?.id ?? Date.now(),
+            spelernaam: responseData?.spelernaam ?? responseData?.spelerNaam ?? spelernaam,
+            ploeg: responseData?.ploeg ?? responseData?.ploegNaam ?? ploeg,
+            kleur: responseData?.kleur ?? kleur
+        }
+        
         setMatchen(prev => prev.map((match) => {
             if (match.id === id) {
                 return { ...match, kaarten: [...(match.kaarten ?? []), nieuweKaart] }
