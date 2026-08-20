@@ -58,22 +58,6 @@ export function PloegenProvider({ children }) {
     }))
   }
 
-  function ManVanDeMatchToevoegen(ploegId, spelerId) {
-    setPloegen(ploegen.map((ploeg) => {
-      if (ploeg.id === ploegId) {
-        return {
-          ...ploeg, spelers: ploeg.spelers.map((speler) => {
-            if (speler.id === spelerId) {
-              return { ...speler, manVanDeMatch: speler.manVanDeMatch + 1 }
-            }
-            return speler
-          })
-        }
-      }
-      return ploeg
-    }))
-  }
-
   return (
     <PloegenContext.Provider value={{ ploegen, PloegToevoegen, VerwijderPloeg, SpelerToevoegen, VerwijderSpeler, ManVanDeMatchToevoegen }}>
       {children}
